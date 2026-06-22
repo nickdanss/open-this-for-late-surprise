@@ -9,6 +9,33 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- ============ STATE 1 — INTRO / CLOSED ENVELOPE (CSS) ============ -->
+  <section class="intro-screen" id="introScreen">
+    <span class="intro-decor d1" aria-hidden="true">✦</span>
+    <span class="intro-decor d2" aria-hidden="true">♡</span>
+    <span class="intro-decor d3" aria-hidden="true">✧</span>
+    <span class="intro-decor d4" aria-hidden="true">♥</span>
+    <span class="intro-decor d5" aria-hidden="true">✦</span>
+
+    <div class="intro-envelope-wrap">
+      <span class="intro-tape intro-tape-l" aria-hidden="true"></span>
+      <span class="intro-tape intro-tape-r" aria-hidden="true"></span>
+
+      <div class="closed-envelope" id="closedEnvelope">
+        <div class="envelope-back" aria-hidden="true"></div>
+        <div class="envelope-paper" aria-hidden="true"></div>
+        <div class="envelope-front-left" aria-hidden="true"></div>
+        <div class="envelope-front-right" aria-hidden="true"></div>
+        <div class="envelope-flap" aria-hidden="true"></div>
+        <span class="envelope-stamp" aria-hidden="true">🎂</span>
+        <button class="envelope-seal" id="openEnvelopeButton" type="button" aria-label="Open your birthday letter">Open me</button>
+      </div>
+
+      <p class="intro-line">A little late, but made with love.</p>
+    </div>
+  </section>
+
+  <!-- ============ STATE 2 — MAIN REVEALED BIRTHDAY PAGE ============ -->
   <div class="floating-layer" aria-hidden="true">
     <span class="floaty f1">♥</span>
     <span class="floaty f2">✦</span>
@@ -18,34 +45,18 @@
     <span class="floaty f6">✦</span>
   </div>
 
+  <!-- STATE 2 — HERO (single integrated scrapbook image) -->
+  <section class="hero-scrapbook" id="home">
+    <div class="hero-scrapbook-wrap">
+      <img src="assets/hero-scrapbook.png"
+           alt="Happy birthday, baby! A scrapbook letter with us, balloons, a cake, and birthday wishes"
+           class="hero-scrapbook-img">
+      <a class="hero-hotspot hotspot-wish" href="#wish" aria-label="Make your wish"></a>
+      <a class="hero-hotspot hotspot-letter" href="#letter" aria-label="Read the letter"></a>
+    </div>
+  </section>
+
   <main>
-    <!-- HERO -->
-    <section class="hero" id="top">
-      <div class="hero-panel">
-        <div class="hero-copy-block">
-          <p class="eyebrow">A belated birthday letter</p>
-          <h1 class="display">Happy birthday,<span class="script">baby!</span></h1>
-          <p class="hero-copy">
-            I missed your birthday and I wanna make it up to you. So I built you a small,
-            quiet place to be celebrated properly. Take your time. It's all for you.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#wish">Make your wish</a>
-            <a class="btn btn-ghost" href="#forgiveness">Read the letter</a>
-          </div>
-        </div>
-
-        <div class="hero-card">
-          <span class="hero-card-tag">Sealed with love</span>
-          <div class="envelope" aria-hidden="true">
-            <div class="envelope-flap"></div>
-            <div class="envelope-heart">Open me</div>
-          </div>
-          <p class="hero-card-note">Belated — but made with all my heart.</p>
-        </div>
-      </div>
-    </section>
-
     <!-- WISH / CANDLES -->
     <section class="wish reveal" id="wish">
       <div class="section-heading">
@@ -57,7 +68,7 @@
         </p>
       </div>
 
-      <div class="wish-stage">
+      <div class="wish-stage scrap-card">
         <div class="cake-scene" id="cakeScene" aria-label="A birthday cake with lit candles">
           <div class="candles" id="candles">
             <div class="candle-unit">
@@ -108,13 +119,14 @@
       </div>
     </section>
 
-    <!-- CONFESSION -->
-    <section class="confession reveal">
+    <!-- CONFESSION / LETTER -->
+    <section class="confession reveal" id="letter">
       <div class="section-heading">
         <p class="eyebrow">The confession</p>
         <h2 class="display">Honest, and a little embarrassed</h2>
       </div>
       <blockquote class="confession-note">
+        <span class="tape tape-note" aria-hidden="true"></span>
         I have no good excuse. But you deserve to be celebrated loudly, even if I'm late.
         You matter to me more than I know how to say. I stayed up making this with my very
         beginner level of tech. I poured my heart into it because you're worth the effort,
@@ -174,6 +186,7 @@
     <!-- COUPON -->
     <section class="coupon reveal">
       <div class="coupon-inner">
+        <span class="tape tape-coupon" aria-hidden="true"></span>
         <p class="eyebrow">Official voucher</p>
         <h2 class="display">A belated birthday coupon</h2>
         <p class="coupon-subtitle">Redeemable for:</p>

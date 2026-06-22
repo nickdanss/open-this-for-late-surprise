@@ -1,3 +1,36 @@
+/* ===== Opening envelope intro ===== */
+const introScreen = document.getElementById("introScreen");
+const closedEnvelope = document.getElementById("closedEnvelope");
+const openEnvelopeButton = document.getElementById("openEnvelopeButton");
+
+if (introScreen && openEnvelopeButton) {
+  // Lock scrolling until the letter is opened (progressive: only if JS runs).
+  document.body.classList.add("intro-locked");
+
+  let opened = false;
+  function openLetter() {
+    if (opened) return;
+    opened = true;
+
+    // 1) flap opens + seal pops
+    if (closedEnvelope) closedEnvelope.classList.add("is-open");
+    openEnvelopeButton.disabled = true;
+
+    // 2) once the envelope animation has played, fade the intro away
+    setTimeout(() => {
+      introScreen.classList.add("is-opening");
+      document.body.classList.remove("intro-locked");
+    }, 780);
+
+    // 3) remove it entirely and reveal the main page
+    setTimeout(() => {
+      introScreen.style.display = "none";
+    }, 1600);
+  }
+
+  openEnvelopeButton.addEventListener("click", openLetter);
+}
+
 /* ===== Element references ===== */
 const noButton = document.getElementById("noButton");
 const yesButton = document.getElementById("yesButton");
