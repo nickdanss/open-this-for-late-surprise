@@ -3,109 +3,197 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emergency Belated Birthday Apology Mission</title>
-  <link rel="icon" href="./index.html">
+  <title>For You — A Belated Birthday</title>
+  <meta name="description" content="A little belated birthday letter, made with love.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%82%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="floating-layer" aria-hidden="true">
-    <span class="floaty heart h1">♥</span>
-    <span class="floaty star s1">✦</span>
-    <span class="floaty heart h2">♥</span>
-    <span class="floaty star s2">✧</span>
-    <span class="floaty heart h3">♥</span>
-    <span class="floaty star s3">✦</span>
-    <span class="floaty heart h4">♥</span>
+    <span class="floaty f1">♥</span>
+    <span class="floaty f2">✦</span>
+    <span class="floaty f3">♥</span>
+    <span class="floaty f4">✧</span>
+    <span class="floaty f5">♥</span>
+    <span class="floaty f6">✦</span>
   </div>
 
-  <main>
-    <section class="hero" id="top">
-      <div class="hero-copy-block">
-        <p class="mission-label">Emergency Belated Birthday Apology Mission</p>
-        <h1>I messed up...</h1>
-        <h2>I forgot your birthday.</h2>
-        <p class="hero-copy">This is my official apology website. hope you forgive me :(</p>
-        <a class="start-button" href="#forgiveness">Begin apology mission</a>
-      </div>
+  <!-- CSS load test: styled pill if CSS is applied; plain text if CSS is broken -->
+  <p class="css-check">♥ Styles loaded — you're all set</p>
 
-      <div class="hero-card" aria-label="Cute belated birthday cake">
-        <div class="cake">
-          <div class="candle"></div>
-          <div class="cake-top"></div>
-          <div class="cake-bottom"></div>
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-panel">
+        <div class="hero-copy-block">
+          <p class="eyebrow">A belated birthday letter</p>
+          <h1 class="display">Happy birthday,<span class="script">a little late.</span></h1>
+          <p class="hero-copy">
+            I missed your birthday and I wanna make it up to you. So I built you a small,
+            quiet place to be celebrated properly. Take your time. It's all for you.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#wish">Make your wish</a>
+            <a class="btn btn-ghost" href="#forgiveness">Read the letter</a>
+          </div>
         </div>
-        <p>Belated, but made with emergency love.</p>
+
+        <div class="hero-card">
+          <span class="hero-card-tag">Sealed with love</span>
+          <div class="envelope" aria-hidden="true">
+            <div class="envelope-flap"></div>
+            <div class="envelope-heart">Open me</div>
+          </div>
+          <p class="hero-card-note">Belated — but made with all my heart.</p>
+        </div>
       </div>
     </section>
 
+    <!-- WISH / CANDLES -->
+    <section class="wish reveal" id="wish">
+      <div class="section-heading">
+        <p class="eyebrow">Make a wish</p>
+        <h2 class="display">Blow out your candles, baby!</h2>
+        <p class="section-lead">
+          I hope you get all the best things in life, because you deserve it. So here it is —
+          close your eyes, make a wish, and blow! Tap the button, or use your microphone and really blow.
+        </p>
+      </div>
+
+      <div class="wish-stage">
+        <div class="cake-scene" id="cakeScene" aria-label="A birthday cake with lit candles">
+          <div class="candles" id="candles">
+            <div class="candle-unit">
+              <span class="smoke"></span>
+              <span class="flame"></span>
+              <span class="wax"></span>
+            </div>
+            <div class="candle-unit tall">
+              <span class="smoke"></span>
+              <span class="flame"></span>
+              <span class="wax"></span>
+            </div>
+            <div class="candle-unit">
+              <span class="smoke"></span>
+              <span class="flame"></span>
+              <span class="wax"></span>
+            </div>
+          </div>
+
+          <div class="cake-figure" aria-hidden="true">
+            <span class="cherry c1"></span>
+            <span class="cherry c2"></span>
+            <span class="cherry c3"></span>
+            <span class="cherry c4"></span>
+            <div class="cake-tier cake-top">
+              <span class="drip d1"></span>
+              <span class="drip d2"></span>
+              <span class="drip d3"></span>
+            </div>
+            <div class="cake-tier cake-bottom">
+              <span class="swag s1"></span>
+              <span class="swag s2"></span>
+              <span class="swag s3"></span>
+            </div>
+            <div class="cake-plate"></div>
+          </div>
+        </div>
+
+        <div class="wish-controls">
+          <button class="btn btn-primary" id="blowButton" type="button">Blow the candles 🎂</button>
+          <button class="btn btn-ghost" id="micButton" type="button">Use microphone 🎤</button>
+          <p class="mic-hint" id="micHint" aria-live="polite">Tip: allow the mic, then blow toward your phone or laptop.</p>
+        </div>
+
+        <p class="wish-message" id="wishMessage" aria-live="polite">
+          Wish accepted. Belated birthday celebration loading… I owe you one proper birthday date.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONFESSION -->
     <section class="confession reveal">
       <div class="section-heading">
-        <p class="tiny-title">Confession Report</p>
-        <h2>Funny, tragic, and very true</h2>
+        <p class="eyebrow">The confession</p>
+        <h2 class="display">Honest, and a little embarrassed</h2>
       </div>
-      <p class="confession-note">
-        I have no excuse. My brain clearly chose chaos. But you deserve to be celebrated properly,
-        even if I am embarrassingly late. You matter to me so much, and I hate that I made you feel
-        less remembered than you deserve. I stay awake to make this with my level 1 knowledge of tech.
-        I hope this tiny website can be the beginning of me making it up to you :(
-      </p>
+      <blockquote class="confession-note">
+        I have no good excuse. But you deserve to be celebrated loudly, even if I'm late.
+        You matter to me more than I know how to say. I stayed up making this with my very
+        beginner level of tech — I poured my heart into it because you're worth the effort,
+        and the redo, and every apology in between. Let this little site be where I start
+        making it up to you.
+      </blockquote>
     </section>
 
+    <!-- REASONS -->
     <section class="reasons reveal">
       <div class="section-heading">
-        <p class="tiny-title">Evidence Folder</p>
-        <h2>Reasons you still deserve the best birthday treatment</h2>
+        <p class="eyebrow">Reasons, collected</p>
+        <h2 class="display">Why you deserve the whole celebration</h2>
       </div>
 
       <div class="reason-grid">
-        <article class="reason-card">You make ordinary days feel softer.</article>
-        <article class="reason-card">You make me laugh even when I’m being dramatic.</article>
+        <article class="reason-card">You make ordinary days feel worth celebrating.</article>
+        <article class="reason-card">You make me laugh even when I'm being dramatic.</article>
+        <article class="reason-card">You always put a smile on my face.</article>
         <article class="reason-card">You deserve to feel loved loudly.</article>
-        <article class="reason-card">You are my favorite person to annoy.</article>
+        <article class="reason-card">You're my favorite person to annoy.</article>
         <article class="reason-card">You deserve a birthday redo.</article>
-        <article class="reason-card">Cause I love you so much</article>
-        <article class="reason-card">You have a great heart and the one I love the most</article>
-        <article class="reason-card">You are Kokom's role model</article>
-        <article class="reason-card">You work so hard and deserve a big love</article>
-        <article class="reason-card">Did I mention I love you already? Here I repeat. I love you</article>
-        <article class="reason-card">Cause you always makes me happy</article>
-        <article class="reason-card">Cause you always have faith in me when no one have</article>
-        <article class="reason-card">Cause you can keep up with my annoying attitude</article>
-        <article class="reason-card">Cause you remember every detail about me</article>
-        <article class="reason-card">Cause I love you so much</article>
+        <article class="reason-card">Because I love you so much.</article>
+        <article class="reason-card">You have the kindest heart, and it's the one I love most.</article>
+        <article class="reason-card">You are Kokom's role model.</article>
+        <article class="reason-card">You work so hard and deserve a big, gentle love.</article>
+        <article class="reason-card">Did I mention I love you? Here it is again — I love you.</article>
+        <article class="reason-card">Because you always make me happy.</article>
+        <article class="reason-card">Because you have faith in me when no one else does.</article>
+        <article class="reason-card">Because you keep up with my impossible attitude.</article>
+        <article class="reason-card">Because you remember every little detail about me.</article>
+        <article class="reason-card">Because — still, always — I love you.</article>
       </div>
     </section>
 
+    <!-- FORGIVENESS -->
     <section class="forgiveness reveal" id="forgiveness">
       <div class="section-heading">
-        <p class="tiny-title">Critical Decision</p>
-        <h2>Forgive me?</h2>
+        <p class="eyebrow">One small ask</p>
+        <h2 class="display">Forgive me?</h2>
+        <p class="section-lead">There's only one right answer here. Try to click “No” and see what happens — because you're not allowed. 😌</p>
       </div>
 
       <div class="button-zone" id="buttonZone">
-        <button class="yes-button" id="yesButton" type="button">I forgive you baby</button>
+        <button class="btn btn-primary yes-button" id="yesButton" type="button">Of course I forgive you</button>
         <button class="no-button" id="noButton" type="button">No</button>
       </div>
 
       <p class="forgive-message" id="forgiveMessage" aria-live="polite">
-        Thank you for forgiving your reckless girlfriend. Your belated birthday date is officially pending.
-        I owe you kisses and a proper celebration.
+        Thank you for forgiving me. Your belated birthday date is officially pending —
+        I owe you a proper celebration, and I intend to deliver.
       </p>
     </section>
 
+    <!-- COUPON -->
     <section class="coupon reveal">
       <div class="coupon-inner">
-        <p class="tiny-title">Official Apology Voucher</p>
-        <h2>Belated Birthday Coupon</h2>
+        <p class="eyebrow">Official voucher</p>
+        <h2 class="display">A belated birthday coupon</h2>
         <p class="coupon-subtitle">Redeemable for:</p>
         <ul>
-          <li>One proper birthday date (online, in restaurant when I paid for you)</li>
-          <li>A gift I can send to your office</li>
-          <li>One sincere apology, repeated as needed</li>
+          <li>One proper birthday date — your pick, my treat.</li>
+          <li>A gift, hand-sent to your office.</li>
+          <li>One sincere apology, repeated as often as needed.</li>
         </ul>
-        <p class="coupon-footer">No expiration date. Unlimited softness included.</p>
+        <div class="coupon-meta">
+          <div><span>Date</span><strong>Whenever you say</strong></div>
+          <div><span>Valid for</span><strong>Forever</strong></div>
+        </div>
+        <p class="coupon-footer">No expiration. Unlimited softness included.</p>
       </div>
     </section>
+
+    <footer class="site-footer">
+      <p>Made for you, with love — from the one who will always love you hard. ♥</p>
+    </footer>
   </main>
 
   <canvas id="confettiCanvas" aria-hidden="true"></canvas>
